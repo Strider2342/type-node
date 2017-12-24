@@ -25,5 +25,6 @@ gulp.task('compile-ts', function() {
 });
 
 gulp.task('build.dev', function() {
+  gulp.start('compile-ts');
   gulp.watch(config.allTs, [ 'compile-ts' ])
 });
